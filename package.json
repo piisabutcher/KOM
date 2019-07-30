@@ -6,7 +6,9 @@
   "main": "config/webpack/webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --config config/webpack/webpack.config.js"
+    "run": "webpack-dev-server --config config/webpack/webpack.config.js",
+    "stop": "ctrl^C --yes"
+
   },
   "keywords": [],
   "author": "",
