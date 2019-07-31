@@ -1,9 +1,10 @@
 const path = require('path');
-const { srcPath, indexHtmlPath, indexJsPath, outPath} = require("./path.file.js");
+const { srcPath, mainPath, componentPath,
+    outPath, entryPath, entryHtml } = require("./path.file.js");
 //插件，能自动生成一个html文件并把我们打包好的js引入文件中
 const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    entry: indexJsPath,
+    entry: entryPath,
     output:{
         path: outPath,
         filename:'app.js'
@@ -28,9 +29,14 @@ module.exports = {
     resolve: {
         extensions: ['.js','jsx']
     },
+    //配置生成的页面入口文件
     plugins: [
         new htmlWebpackPlugin({
-            title:'webpack react配置'
+            title:'webpack react配置',
+            template: entryHtml,
+            inject: 'body',
+            favicon: "",//指定页面
+            filename: "index.html"
         })
     ]
 };

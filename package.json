@@ -2,13 +2,12 @@
   "name": "kom",
   "version": "1.0.0",
   "description": "",
-  "homepage":".",
+  "homepage": ".",
   "main": "config/webpack/webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "webpack-dev-server --config config/webpack/webpack.config.js",
     "stop": "ctrl^C --yes"
-
   },
   "keywords": [],
   "author": "",
@@ -34,6 +33,8 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "antd": "^3.20.7",
+    "layui-src": "^2.5.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
