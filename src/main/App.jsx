@@ -1,17 +1,11 @@
 import React from "react";
-import Login from "../component/Login/login.jsx"
-import { Button } from "antd";
-
+import Home from "../component/Home/Home.jsx";
+import "./style/app.css"
 export default class App extends React.Component{
     render() {
         return(
-            <div className="App">
-                <h1>Hello React</h1>
-                <Login/>
-                <Button type="primary">primary</Button>
-
-
-            </div>
+            <Home/>
         )
     }
 }
+
