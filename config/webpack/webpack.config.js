@@ -7,13 +7,16 @@ module.exports = {
     entry: entryPath,
     output:{
         path: outPath,
-        filename:'app.js'
+        filename:'app.js',
+        publicPath: "/"
     },
     devServer:{
         hot:true,
         //proxy跨域时模拟接口代理
         open: true,// 自动打开浏览器
-        port: 3000// 打开端口
+        port: 3000,// 打开端口
+        historyApiFallback: true,
+        contentBase: path.join(__dirname,"../")
     },
     module: {
         rules: [
