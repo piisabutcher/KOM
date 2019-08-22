@@ -36,6 +36,7 @@ class Home extends React.Component{
                </div>
                <div className="right">
                    <Router history={history}>
+
                        <Route path="/" component={User}/>
                        <Route path="/user" component={User}/>
                        <Route path="/photoWall" component={PhotoWall}/>
